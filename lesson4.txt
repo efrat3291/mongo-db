@@ -1,0 +1,11 @@
+use bookShop
+# סעיף 11 ואילך
+db.books.find().sort({name:/data/i})
+db.books.find({code:/e$/})
+db.books.find().sort({name:1})
+db.books.find().sort({name:-1})
+db.books.find({name:/^J/}).count()
+db.books.find().sort({numPages:-1}).limit(5)
+db.books.find({category: {$exists:false}})
+db.books.find({shortDescription: {$exists:true}})
+db.books.find({objectId: {$exists:true}})
